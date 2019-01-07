@@ -72,7 +72,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **David Peterson** - *Initial work* - [CSVtoJson](https://)
+* **David Peterson** - *Initial work* - [CSVtoJson](https://github.com/DavidPeterson002/project-source-code)
 
 See also the list of [contributors](https://github.com/DavidPeterson002/project-source-code/contributors) who participated in this project.
 
