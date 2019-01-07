@@ -12,29 +12,13 @@ namespace CsvToJson
     {
         public static void Main(string[] args)
         {
-            string CSVpath = @"C:\Users\dpeterson003\Documents\id-1003_dailyactivity_20171001_20171007.csv";
-            //string CSVpath = @"C:\Users\dpeterson003\Documents\id-1003_dailycalories_20171001_20171007.csv";
-            //string CSVpath = @"C:\Users\dpeterson003\Documents\id-1003_dailysteps_20171001_20171007.csv";
-            //string CSVpath = @"C:\Users\dpeterson003\Documents\id-1003_heartrate_15min_20171001_20171007.csv";
-            //string CSVpath = @"C:\Users\dpeterson003\Documents\id-1003_sleepday_20171001_20171007.csv";
-            //string CSVpath = @"C:\Users\dpeterson003\Documents\id-1003_dailyrestingheartrate_20171001_20171007.csv";
-            //string CSVpath = @"C:\Users\dpeterson003\Documents\id-1003_weightloginfo_20171001_20171007.csv";
+            string CSVpath = @"C:\Your\Documents\Path\here.csv";
+
 
             string data = ReadFile(CSVpath);
             var json = JValue.Parse(data).ToString(Formatting.Indented);
             Console.WriteLine(json);
             Console.ReadLine();
-
-            //string[] bullets = { "1.", "2.", "3.", "4." };
-            //string[] words = { "Friends", "Family", "CoWorkers" };
-
-            //var bulletedList = bullets.Zip(words, (x, y) => $"{x} {y}");
-
-            //foreach (var item in bulletedList)
-            //    Console.WriteLine($"{item}");
-
-
-            //Console.ReadLine();
         }
 
         private static string ReadFile(string filePath)
