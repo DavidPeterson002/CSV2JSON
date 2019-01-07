@@ -17,6 +17,13 @@ namespace CsvToJson
 
             string data = ReadFile(CSVpath);
             var json = JValue.Parse(data).ToString(Formatting.Indented);
+
+            using (StreamWriter file = File.CreateText(@"C:\TEMP\output.json"))
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                //serialize object directly into file stream
+                serializer.Serialize(file, json);
+            }
             Console.WriteLine(json);
             Console.ReadLine();
         }
